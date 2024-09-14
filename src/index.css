@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 6rem 0;
+}
+
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 12px;
+  font-family: "Inconsolata";
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.chart {
+  margin-bottom: 20px;
+}
+
+.chart .total-amt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chart .Box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 400px;
+}
+
+.Button.btn {
+  transform: translateY(-50%) rotate(90deg);
+  position: absolute;
+  top: 50%;
+  left: -4.5%;
+}
+
+.Button.hist {
+  transform: translateY(-50%) rotate(90deg);
+  position: absolute;
+  top: 50%;
+  right: -4.5%;
+}
+
+.nav-icon {
+  visibility: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.history-box {
+  height: 520px;
+  overflow-y: scroll;
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: 890px) {
+  .Button.btn {
+    left: -7%;
+  }
+
+  .Button.hist {
+    right: -7%;
+  }
+
+  .nav-icon {
+    visibility: visible;
+  }
+
+  .link-lists {
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -500px;
+    background: #644ed6;
+    padding: 20px;
+    padding-top: 0;
+    transition: top 0.5s;
+  }
+
+  .link-lists.open {
+    top: 100%;
+  }
+
+  .link-lists .nav-link {
+    display: block;
+    margin: 12px 0;
+  }
+}
